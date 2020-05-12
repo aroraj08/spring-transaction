@@ -1,16 +1,12 @@
-package com.example.springjpa.service;
+package com.example.springtransaction.service;
 
-import com.example.springjpa.domain.Address;
-import com.example.springjpa.exceptions.CustomerNotFoundException;
-import com.example.springjpa.mapper.AddressMapper;
-import com.example.springjpa.mapper.CustomerMapper;
-import com.example.springjpa.model.CustomerDto;
-import com.example.springjpa.domain.Customer;
-import com.example.springjpa.repository.AddressRepository;
-import com.example.springjpa.repository.CustomerRepository;
+import com.example.springtransaction.exceptions.CustomerNotFoundException;
+import com.example.springtransaction.mapper.CustomerMapper;
+import com.example.springtransaction.model.CustomerDto;
+import com.example.springtransaction.domain.Customer;
+import com.example.springtransaction.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;

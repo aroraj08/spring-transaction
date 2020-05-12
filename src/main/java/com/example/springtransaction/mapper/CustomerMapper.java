@@ -1,7 +1,7 @@
-package com.example.springjpa.mapper;
+package com.example.springtransaction.mapper;
 
-import com.example.springjpa.model.CustomerDto;
-import com.example.springjpa.domain.Customer;
+import com.example.springtransaction.model.CustomerDto;
+import com.example.springtransaction.domain.Customer;
 import org.mapstruct.Mapper;
 
 @Mapper

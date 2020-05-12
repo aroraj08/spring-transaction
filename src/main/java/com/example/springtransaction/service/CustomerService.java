@@ -1,8 +1,7 @@
-package com.example.springjpa.service;
+package com.example.springtransaction.service;
 
-import com.example.springjpa.exceptions.CustomerNotFoundException;
-import com.example.springjpa.model.CustomerDto;
-import com.example.springjpa.domain.Customer;
+import com.example.springtransaction.exceptions.CustomerNotFoundException;
+import com.example.springtransaction.model.CustomerDto;
 
 import java.util.List;
 import java.util.Optional;

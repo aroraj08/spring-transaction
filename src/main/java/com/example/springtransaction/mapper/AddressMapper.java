@@ -1,7 +1,7 @@
-package com.example.springjpa.mapper;
+package com.example.springtransaction.mapper;
 
-import com.example.springjpa.domain.Address;
-import com.example.springjpa.model.AddressDto;
+import com.example.springtransaction.domain.Address;
+import com.example.springtransaction.model.AddressDto;
 import org.mapstruct.Mapper;
 
 @Mapper

@@ -1,4 +1,4 @@
-package com.example.springjpa.model;
+package com.example.springtransaction.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,12 +1,11 @@
-package com.example.springjpa.service;
+package com.example.springtransaction.service;
 
-import com.example.springjpa.domain.Address;
-import com.example.springjpa.mapper.AddressMapper;
-import com.example.springjpa.model.AddressDto;
-import com.example.springjpa.repository.AddressRepository;
+import com.example.springtransaction.domain.Address;
+import com.example.springtransaction.mapper.AddressMapper;
+import com.example.springtransaction.model.AddressDto;
+import com.example.springtransaction.repository.AddressRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;

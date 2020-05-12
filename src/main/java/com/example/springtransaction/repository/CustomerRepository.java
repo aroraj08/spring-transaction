@@ -1,6 +1,6 @@
-package com.example.springjpa.repository;
+package com.example.springtransaction.repository;
 
-import com.example.springjpa.domain.Customer;
+import com.example.springtransaction.domain.Customer;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

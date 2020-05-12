@@ -1,4 +1,4 @@
-package com.example.springjpa.model;
+package com.example.springtransaction.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

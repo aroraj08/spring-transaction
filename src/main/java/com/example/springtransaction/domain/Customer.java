@@ -1,4 +1,4 @@
-package com.example.springjpa.domain;
+package com.example.springtransaction.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,8 +1,8 @@
-package com.example.springjpa.controller;
+package com.example.springtransaction.controller;
 
-import com.example.springjpa.model.CustomerDto;
-import com.example.springjpa.exceptions.CustomerNotFoundException;
-import com.example.springjpa.service.CustomerService;
+import com.example.springtransaction.model.CustomerDto;
+import com.example.springtransaction.exceptions.CustomerNotFoundException;
+import com.example.springtransaction.service.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
-package com.example.springjpa.controller;
+package com.example.springtransaction.controller;
 
-import com.example.springjpa.model.ErrorDto;
-import com.example.springjpa.exceptions.CustomerNotFoundException;
+import com.example.springtransaction.model.ErrorDto;
+import com.example.springtransaction.exceptions.CustomerNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;

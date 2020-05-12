@@ -1,7 +1,7 @@
-package com.example.springjpa;
+package com.example.springtransaction;
 
-import com.example.springjpa.domain.Customer;
-import com.example.springjpa.repository.CustomerRepository;
+import com.example.springtransaction.domain.Customer;
+import com.example.springtransaction.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
