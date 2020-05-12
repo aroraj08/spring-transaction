@@ -1,13 +1,20 @@
 package com.example.springjpa.service;
 
+import com.example.springjpa.domain.Address;
 import com.example.springjpa.exceptions.CustomerNotFoundException;
+import com.example.springjpa.mapper.AddressMapper;
 import com.example.springjpa.mapper.CustomerMapper;
 import com.example.springjpa.model.CustomerDto;
 import com.example.springjpa.domain.Customer;
+import com.example.springjpa.repository.AddressRepository;
 import com.example.springjpa.repository.CustomerRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -16,13 +23,17 @@ import java.util.stream.Collectors;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
+    private static final Logger logger = LoggerFactory.getLogger(CustomerServiceImpl.class);
     private final CustomerRepository customerRepository;
-
     private final CustomerMapper customerMapper;
 
-    public CustomerServiceImpl(CustomerRepository customerRepository, CustomerMapper customerMapper) {
+    private final AddressService addressService;
+
+    public CustomerServiceImpl(CustomerRepository customerRepository, CustomerMapper customerMapper,
+                               AddressService addressService) {
         this.customerRepository = customerRepository;
         this.customerMapper = customerMapper;
+        this.addressService = addressService;
     }
 
     @Override
@@ -60,14 +71,19 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public Long saveCustomer(CustomerDto customerDto) {
 
-        // create customer object using customer Dto object
+        // saving customer data
         Customer customer = this.customerMapper.customerDtoToCustomer(customerDto);
-
-        // call repository to save customer
         Customer savedCustomer = this.customerRepository.save(customer);
-        return savedCustomer.getCustomerId();
+        Long customerId = savedCustomer.getCustomerId();
+
+        // saving address data
+        this.addressService.saveAddress(customerDto.getAddressDto(), customerId);
+
+
+        return customerId;
     }
 
     @Override

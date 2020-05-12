@@ -25,4 +25,7 @@ public class Customer {
     private String firstName;
     private String lastName;
 
+    /*@OneToOne(fetch = FetchType.LAZY, optional = true)
+    private Address address;*/
+
 }

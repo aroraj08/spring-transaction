@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>spring-jpa</artifactId>
+    <artifactId>spring-transaction</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-jpa</name>
+    <name>spring-transaction</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

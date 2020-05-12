@@ -22,4 +22,7 @@ public class CustomerDto {
 
     @JsonProperty("LastName")
     private String lastName;
+
+    @JsonProperty("Address")
+    private AddressDto addressDto;
 }

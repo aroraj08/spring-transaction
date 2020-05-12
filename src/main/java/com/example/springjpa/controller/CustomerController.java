@@ -27,7 +27,6 @@ public class CustomerController {
 
         CustomerDto customer = this.customerService.getCustomerById(customerId);
         return new ResponseEntity<CustomerDto>(customer, HttpStatus.OK);
-
     }
 
     @GetMapping("/all")
